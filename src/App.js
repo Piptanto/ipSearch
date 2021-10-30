@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
 import {Icon} from 'leaflet'
 
+//How to deploy on GitHub Pages: https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
