@@ -1,5 +1,6 @@
 import './App.css';
 import axios from 'axios';
+import Flag from './components/Flag';
 import { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png"
@@ -28,6 +29,7 @@ function App() {
   console.log(latlng);
 
 
+
   return (
     <div className="App">
       <h1>What is my IP-address?</h1>
@@ -42,6 +44,8 @@ function App() {
         <p>{ipNum?.location?.region}, {ipNum?.location?.country}</p>
         <p>lat: {ipNum?.location?.lat}</p>
         <p>lng: {ipNum?.location?.lng}</p>
+        <img src={`https://flagcdn.com/80x60/${ipNum?.location?.country.toLowerCase()}.png`} srcset={`https://flagcdn.com/h40/${ipNum?.location?.country?.toLowerCase()}.png 2x,
+        https://flagcdn.com/h60/${ipNum?.location?.country.toLowerCase()}.png 3x`} alt="flag" />
       </div>
       <MapContainer center={latlng} zoom={15} scrollWheelZoom={false}>
   <TileLayer
