@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ipSearch/static/css/main.cadfaa92.chunk.css",
+    "main.js": "/ipSearch/static/js/main.e0b7fb19.chunk.js",
+    "main.js.map": "/ipSearch/static/js/main.e0b7fb19.chunk.js.map",
+    "runtime-main.js": "/ipSearch/static/js/runtime-main.72350e7b.js",
+    "runtime-main.js.map": "/ipSearch/static/js/runtime-main.72350e7b.js.map",
+    "static/js/2.fddec093.chunk.js": "/ipSearch/static/js/2.fddec093.chunk.js",
+    "static/js/2.fddec093.chunk.js.map": "/ipSearch/static/js/2.fddec093.chunk.js.map",
+    "static/js/3.983c6c91.chunk.js": "/ipSearch/static/js/3.983c6c91.chunk.js",
+    "static/js/3.983c6c91.chunk.js.map": "/ipSearch/static/js/3.983c6c91.chunk.js.map",
+    "index.html": "/ipSearch/index.html",
+    "static/css/main.cadfaa92.chunk.css.map": "/ipSearch/static/css/main.cadfaa92.chunk.css.map",
+    "static/js/2.fddec093.chunk.js.LICENSE.txt": "/ipSearch/static/js/2.fddec093.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72350e7b.js",
+    "static/js/2.fddec093.chunk.js",
+    "static/css/main.cadfaa92.chunk.css",
+    "static/js/main.e0b7fb19.chunk.js"
+  ]
+}
