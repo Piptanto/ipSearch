@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ipSearch/static/css/main.25c9323b.chunk.css",
+    "main.css": "/ipSearch/static/css/main.9b98c3ef.chunk.css",
     "main.js": "/ipSearch/static/js/main.928643a1.chunk.js",
     "main.js.map": "/ipSearch/static/js/main.928643a1.chunk.js.map",
     "runtime-main.js": "/ipSearch/static/js/runtime-main.86732222.js",
@@ -10,13 +10,13 @@
     "static/js/3.7b01230e.chunk.js": "/ipSearch/static/js/3.7b01230e.chunk.js",
     "static/js/3.7b01230e.chunk.js.map": "/ipSearch/static/js/3.7b01230e.chunk.js.map",
     "index.html": "/ipSearch/index.html",
-    "static/css/main.25c9323b.chunk.css.map": "/ipSearch/static/css/main.25c9323b.chunk.css.map",
+    "static/css/main.9b98c3ef.chunk.css.map": "/ipSearch/static/css/main.9b98c3ef.chunk.css.map",
     "static/js/2.05f8976b.chunk.js.LICENSE.txt": "/ipSearch/static/js/2.05f8976b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.86732222.js",
     "static/js/2.05f8976b.chunk.js",
-    "static/css/main.25c9323b.chunk.css",
+    "static/css/main.9b98c3ef.chunk.css",
     "static/js/main.928643a1.chunk.js"
   ]
 }
