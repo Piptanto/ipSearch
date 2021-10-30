@@ -1,37 +1,63 @@
 import './App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-//import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import markerIconPng from "leaflet/dist/images/marker-icon.png"
+import {Icon} from 'leaflet'
+
 
 function App() {
   const API_KEY = process.env.REACT_APP_API_KEY;
-  const url = 'https://geo.ipify.org/api/v2/country?apiKey='+API_KEY+'&ipAddress='
+  const url = 'https://geo.ipify.org/api/v2/country,city?apiKey='+API_KEY+'&ipAddress='
   
+  const [loading, setLoading] = useState(false);
   const [ipNum, setIp] = useState('not found');
+  const [latlng, setLatlng] = useState([51.505, -0.09]);
 
   useEffect(() => loadIp(), []);
 
   const loadIp = async () => {
-
+    setLoading(true);
     const response = await axios.get(url);
     console.log(response);
-
     setIp(response.data);
-
+    setLatlng([response.data.location.lat, response.data.location.lng]);
+    setLoading(false);
   }
+  console.log(latlng);
 
 
   return (
     <div className="App">
       <h1>What is my IP-address?</h1>
+      {loading ?
+      <p id="loading">Loading...</p>
+      :
+      <div className="body">
       <div className="ipField">
         <p  style={{textDecorationLine: 'underline'}}>My IP:</p>
-        <p>{ipNum?.ip}</p>
-        <p>{ipNum?.location?.country}</p>
-        <p>{ipNum?.location?.region}</p>
+        <p style={{fontWeight: 'bold'}}>{ipNum?.ip}</p>
+        <p>{ipNum?.location?.city}</p>
+        <p>{ipNum?.location?.region}, {ipNum?.location?.country}</p>
+        <p>lat: {ipNum?.location?.lat}</p>
+        <p>lng: {ipNum?.location?.lng}</p>
       </div>
+      <MapContainer center={latlng} zoom={15} scrollWheelZoom={false}>
+  <TileLayer
+    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+  />
+  <Marker position={latlng} icon={new Icon({iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41]})}>
+    <Popup>
+      You are here <br />
+    </Popup>
+  </Marker>
+</MapContainer>
+</div>
+      }
     </div>
   );
 }
 
 export default App;
+
